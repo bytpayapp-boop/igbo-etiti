@@ -29,7 +29,7 @@ function StatItem({ number, label, image }: StatItemProps) {
       <div className="absolute h-40 w-40 rounded-full group-hover:scale-[1.8] transition-all bg-green-600/10 z-[80] -bottom-20 -right-20" />
       <CardContent className="pt-8 pb-5 z-[100]">
         <div className="space-y-3">
-          <div className="text-4xl md:text-5xl font-bold text-primary">
+          <div className="text-4xl md:text-5xl font-bold">
             {count.toLocaleString()}
           </div>
           <p className="text-foreground/80 text-lg leading-relaxed">{label}</p>
