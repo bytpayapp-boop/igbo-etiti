@@ -5,7 +5,13 @@ import { Footer } from '@/components/common/footer'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
+import { Inter } from 'next/font/google'
 import Link from 'next/link'
+
+const inter = Inter({
+  subsets: ['latin'],
+ display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'IGSL Local Government',
@@ -74,7 +80,7 @@ export default function RootLayout({
         {/* Canonical URL */}
         <link rel="canonical" href="https://igsl.vercel.app" />
       </head>
-      <body className="font-sans antialiased flex flex-col  min-h-screen">
+      <body className={`${inter.className} antialiased flex flex-col  min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="flex-1">
              {/* <Link href="/" className="flex items-center gap-3 font-bold top-5 left-5 text-xl md:top-5 md:left-10 absolute  md:block md:flex hover:opacity-80 transition-opacity">
