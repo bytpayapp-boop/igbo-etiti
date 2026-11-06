@@ -121,7 +121,7 @@ export default function AdminLayout({
             </div>
             </div>
             
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link>
           )}
           <Button

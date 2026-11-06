@@ -1,7 +1,7 @@
 {
-  "name": "IGSL Local Government",
-  "short_name": "IGSL",
-  "description": "Official portal of IGSL Local Government - Services, Information, and Citizen Engagement",
+  "name": "Igbo-Etiti Local Government",
+  "short_name": "Igbo-Etiti",
+  "description": "Official portal of Igbo-Etiti Local Government - Services, Information, and Citizen Engagement",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

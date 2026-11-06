@@ -68,7 +68,7 @@ export default function AdminDashboard() {
       <div>
         <h1 className="text-4xl font-bold text-primary mb-2">Dashboard</h1>
         <p className="text-foreground/70">
-          Welcome back to the IGSL admin panel. Here&apos;s your overview.
+          Welcome back to the Igbo-Etiti admin panel. Here&apos;s your overview.
         </p>
       </div>
 

@@ -5,8 +5,8 @@ import { Navbar } from '@/components/common/navbar'
 import { Footer } from '@/components/common/footer'
 import { useSearchParams } from 'next/navigation'
 // export const metadata: Metadata = {
-//   title: 'Certificate Verification - IGSL',
-//   description: 'Your certificate is official and valid. Thank you for using IGSL.',
+//   title: 'Certificate Verification - Igbo-Etiti',
+//   description: 'Your certificate is official and valid. Thank you for using Igbo-Etiti.',
 // }
 export const dynamic = 'force-dynamic'
 
@@ -24,7 +24,7 @@ function VerifyContent() {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src="/coatOfArm.png"
-            alt="IGSL Coat of Arms"
+            alt="Igbo-Etiti Coat of Arms"
             className="w-96 h-96 opacity-10"
           />
         </div>
@@ -56,7 +56,7 @@ function VerifyContent() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 font-medium">
               {`Belongs to ${user?.n}, issued by`}
-              <span className="font-bold">IGSL</span>
+              <span className="font-bold">Igbo-Etiti</span>
             </p>
           </div>
 
@@ -65,7 +65,7 @@ function VerifyContent() {
 
           {/* Subtitle */}
           <p className="text-lg text-gray-500 mb-12">
-            Your certificate has been verified and authenticated by the IGSL Local Government Authority. It is now official and can be used for all official purposes.
+            Your certificate has been verified and authenticated by the Igbo-Etiti Local Government Authority. It is now official and can be used for all official purposes.
           </p>
 
           {/* Action Buttons */}

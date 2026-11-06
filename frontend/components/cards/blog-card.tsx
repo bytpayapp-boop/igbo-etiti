@@ -69,7 +69,7 @@ export function BlogCard({ post }: BlogCardProps) {
         </div>
         <CardHeader>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-medium bg-blue-600/40 px-2 py-1 rounded">
+            <span className="text-xs font-medium bg-[var(--gold)]/20 text-[var(--ink)] dark:text-[var(--gold)] px-2 py-1 rounded">
               {post.category}
             </span>
             <span className="text-xs text-foreground/60">

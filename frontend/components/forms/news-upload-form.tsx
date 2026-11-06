@@ -244,7 +244,7 @@ export default function NewsUploadForm({ onBack }: NewsUploadFormProps) {
               <Input
                 id="author"
                 name="author"
-                placeholder="e.g., IGSL Communications"
+                placeholder="e.g., Igbo-Etiti Communications"
                 value={formData.author}
                 onChange={handleInputChange}
               />

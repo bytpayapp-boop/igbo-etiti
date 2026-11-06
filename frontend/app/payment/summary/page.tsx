@@ -233,7 +233,7 @@ else{
             name: user?.fullName,
           },
           customizations: {
-            title: `IGSL - ${transaction.type} payment`,
+            title: `Igbo-Etiti - ${transaction.type} payment`,
             description: "The Fastest Way to Fund Your Wallet Automatically",
             logo: "https://igsl.vercel.app/coatOfArm.png",
           },
@@ -296,7 +296,7 @@ else{
                 name: user?.fullName,
               },
               customizations: {
-                title: `IGSL - ${transaction.type} payment`,
+                title: `Igbo-Etiti - ${transaction.type} payment`,
                 description: "The Fastest Way to Fund Your Wallet Automatically",
                 logo: "https://igsl.vercel.app/coatOfArm.png",
               },
@@ -343,10 +343,10 @@ else{
       customer: {
         email: 'citizen1@gmail.com',
         //phone_number: user?.p,
-        name: 'IGSL citizen',
+        name: 'Igbo-Etiti citizen',
       },
       customizations: {
-        title: `IGSL - ${transaction.type} payment`, //${user?.fullName.split(" ")[0]}
+        title: `Igbo-Etiti - ${transaction.type} payment`, //${user?.fullName.split(" ")[0]}
         description: "The Fastest Way to Fund Your Wallet Automatically",
         logo: "https://igsl.vercel.app/coatOfArm.png",
       },
@@ -464,7 +464,7 @@ else{
                 />
                 <span className="text-sm text-foreground dark:text-gray-300">
                   I acknowledge that I have reviewed the application details and the charges
-                  above. I authorize IGSL to process my payment for the application. I
+                  above. I authorize Igbo-Etiti to process my payment for the application. I
                   understand that this payment is non-refundable unless the application is rejected
                   due to government error.
                 </span>

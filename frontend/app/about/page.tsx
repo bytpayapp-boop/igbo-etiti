@@ -21,7 +21,7 @@ export default function AboutPage() {
           </Link>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Igbo-Eze South Local Government</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Igbo-Etiti Local Government</h1>
           <p className="text-lg text-foreground/70">
             Learn more about our local government and the services we provide to our community.
           </p>

@@ -4,71 +4,57 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
     { href: '/services', label: 'Services' },
-    // { href: '/archive', label: 'Archive' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/staff', label: 'Our Staff' },
     { href: '/blog', label: 'News' },
   ]
 
   return (
-    <nav className="sticky top-0 z-500 bg-primary/30 backdrop-blur-md  text-primary-foreground shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 font-bold text-xl hover:opacity-80 transition-opacity">
-           <div className="w-12 h-12 bg-white relative overflow-hidden rounded-full flex items-center justify-center shadow-md">
-            <div className="w-20 h-20 relative flex items-center justify-center rounded">
-              <img 
-                src="/coatOfArm.png" 
-                alt="Nigerian Coat of Arms" 
-                className="object-cover relative"
+    <nav className="sticky top-0 z-50 border-b border-border bg-background/90 text-foreground backdrop-blur-md">
+      <div className="landing-wrap">
+        <div className="flex h-[4.25rem] items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 font-bold text-xl transition-opacity hover:opacity-80">
+            <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-white shadow-md">
+              <img
+                src="/coatOfArm.png"
+                alt="Nigerian Coat of Arms"
+                className="relative object-cover"
               />
             </div>
-            </div>
-            
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="tracking-wide">Igbo-Etiti</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link,i) => (
+          <div className="hidden items-center gap-1 md:flex">
+            {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
-                <Button  className={`${i==0?'border-l-[1px]':i==3?'border-r-[1px]':null} text-primary-foreground bg-transparent  border-b-[1px] border-t-[1px] border-white/80 hover:translate-y-[4px] cursor-pointer hover:bg-white transition-all hover:text-green-600`}>
+                <Button className="rounded-none border-b-2 border-transparent bg-transparent text-foreground hover:border-[var(--gold)] hover:bg-transparent hover:text-[var(--gold)]">
                   {link.label}
                 </Button>
               </Link>
             ))}
           </div>
 
-          {/* Auth Links */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden items-center gap-2 md:flex">
             <Link href="/auth/login">
-              <Button className="text-primary-foreground bg-transparent hover:bg-white/20">
+              <Button className="bg-transparent text-foreground hover:bg-muted">
                 Login
               </Button>
             </Link>
             <Link href="/admin/login">
-              <Button className="border border-white bg-white text-primary hover:bg-primary hover:text-white">
+              <Button className="rounded-sm border border-[var(--gold)] bg-[var(--gold)] text-[var(--ink)] hover:bg-transparent hover:text-[var(--gold)]">
                 Staff
               </Button>
             </Link>
-            {/* <Link href="/admin">
-              <Button className="border border-white bg-transparent text-white hover:bg-orange-600">
-                Staff
-              </Button>
-            </Link> */}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-md hover:bg-primary-foreground/10"
+            className="rounded-md p-2 hover:bg-muted md:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -76,32 +62,31 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 border-t border-primary-foreground/20">
+          <div className="border-t border-border pb-4 md:hidden">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 hover:bg-primary-foreground/10 rounded-md transition"
+                className="block rounded-md px-4 py-2 transition hover:bg-muted"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="px-4 py-2 flex flex-col space-y-[4px]">
+            <div className="flex flex-col space-y-1 px-4 py-2">
               <Link href="/auth/login">
-                <Button className="w-full text-primary-foreground bg-green-600 hover:bg-green-700">
+                <Button className="w-full bg-muted text-foreground hover:bg-muted/80">
                   Login
                 </Button>
               </Link>
               <Link href="/auth/register">
-                <Button className="w-full border border-green-600 bg-white text-green-600 hover:bg-green-50">
+                <Button className="w-full border border-border bg-transparent text-foreground hover:border-[var(--gold)] hover:text-[var(--gold)]">
                   Sign Up
                 </Button>
               </Link>
               <Link href="/admin/login">
-                <Button className="w-full border border-orange-600 bg-orange-600/10 text-orange-600 hover:bg-orange-600/20">
+                <Button className="w-full bg-[var(--gold)] text-[var(--ink)] hover:bg-[var(--gold)]/90">
                   Staff Portal
                 </Button>
               </Link>

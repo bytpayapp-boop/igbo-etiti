@@ -1,187 +1,102 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { motion } from "motion/react";
 import { useRouter } from 'next/navigation'
-import { FileText, Users, Award, HandHeart, X, MessageCircle, Globe, Zap, FileUser, MotorbikeIcon, View, HeartHandshake, LucideGlobe2, AtSignIcon, Globe2, GlobeIcon, ArrowUpAZIcon, LucideScanSearch, SearchCheck } from 'lucide-react'
-// import { useEffect} from 'react'
-
+import { FileText, FileUser, GlobeIcon, MessageCircle, SearchCheck } from 'lucide-react'
 
 export function HeroSection() {
+  const router = useRouter()
 
-
-  
-
- 
   const features = [
-   
     {
       icon: GlobeIcon,
       title: 'E-Governance',
-      description: 'Empowered through state-of-the-art technology.'
+      description: 'Services delivered through a modern digital portal.',
     },
     {
       icon: SearchCheck,
       title: 'Transparent Progress',
-      description: "Track our past, current, and anticipated progress"
+      description: 'Track past, current, and upcoming development.',
     },
     {
       icon: FileText,
       title: 'Vital Documents',
-      description: 'Access birth certificates and identification with ease.'
-    }
+      description: 'Birth certificates and identification, online.',
+    },
+    {
+      icon: MessageCircle,
+      title: 'Citizen Voice',
+      description: 'Send a confidential message to the administration.',
+    },
   ]
 
-  const router = useRouter()
-
   return (
-    <section className="min-h-screen w-full -mt-20 pt-10 bg-white/80 dark:bg-gray-800 relative md:pl-10 overflow-hidden">
-      {/* Background decorative elements - Nigerian flag colors */}
-     
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -right-20 -top-4 w-96 h-96 bg-gradient-to-br from-green-400 via-yellow-700 to-orange-600 rounded-full opacity-10 blur-3xl"></div>
-        <div className="absolute -bottom-10 right-20 w-full h-96 bg-gradient-to-tr from-green-600 via-green-600 to-orange-400 rounded-full opacity-5 blur-3xl"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-screen py-20">
-          {/* Left Content */}
-          <div className="space-y-8">
-
- {/**image box*/}
-            <div
-            style={{transform:'translate(-50%,-50%)'}}
-             className='h-100 w-100 flex absolute top-[22%] md:top-[30%] left-[50%] md:left-[24%] z-[5]'>
-             
-              <img src={'/innerImage.png'} 
-              className='opacity-20 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-60 w-60'/>
-              <motion.img
-              initial={{rotate:'0deg'}}
-              animate={{rotate:'360deg'}}
-              transition={{duration:14, repeat:Infinity,ease:'linear'}}
-              src={'/borderImage1.png'}
-              className='opacity-20 absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 h-80 w-80'
-              />
-            </div>
-            <div className='z-[50] relative'>
-              <p className="text-sm z-[50] font-medium mb-2">Welcome to</p>
-              <h1 className="text-5xl text-center md:text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-300 leading-tight mb-4">
-                Igbo-Eze South <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-500 to-gray-700 dark:from-gray-200 dark:via-gray-400 dark:to-gray-100">Local Government</span>
+    <section className="landing-band ink-panel relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse at 82% 12%, color-mix(in oklch, var(--gold) 32%, transparent), transparent 52%), radial-gradient(ellipse at 8% 88%, color-mix(in oklch, var(--faded-green) 28%, transparent), transparent 48%)',
+        }}
+      />
+      <div className="landing-wrap relative">
+        <div className="landing-hero">
+          <div className="flex flex-col justify-center gap-8">
+            <div className="space-y-5">
+              <p className="eyebrow">
+                <span className="h-px w-8 bg-[var(--gold)]" />
+                Official portal
+              </p>
+              <h1 className="max-w-xl text-5xl leading-[0.95] text-foreground md:text-6xl lg:text-7xl">
+                Igbo-Etiti
+                <span className="mt-2 block text-[var(--gold)]">Local Government</span>
               </h1>
-              <p className="text-transparent mt-20 md:mt-14 text-center bg-clip-text bg-gradient-to-r  from-gray-700 dark:from-white via-green-500 to-red-500 font-bold text-lg md:text-xl mt-4">
-                Progress Agenda. Tomorrow is Here...
+              <div className="gold-rule" />
+              <p className="max-w-lg text-lg leading-relaxed text-muted-foreground">
+                Progress Agenda. Tomorrow is here — access services, follow development, and engage your local administration.
               </p>
             </div>
 
-            {/* Feature Cards */}
-            <div className="space-y-4 pt-6">
-              {features.map((feature, index) => {
-                const Icon = feature.icon
-                return (
-                  <div
-                    key={index}
-                    className="rounded-lg border-[1.2px] border-green-600 hover:border shadow-sm hover:border-gray-600 bg-green-600/10  backdrop-blur-md p-4 hover:translate-x-[20px] hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0">
-                        <Icon className="h-6 w-6 text-green-600" style={{color: '#4ADE80'}} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-gray-700 dark:text-gray-300 font-semibold text-lg">{feature.title}</h3>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">{feature.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div> 
-
-              
-
-            {/* CTA Links */}
-            <div className="absolute inset-x-0 flex flex-col items-center gap-3 md:p-4 z-50 md:px-6 md:-mt-24 md:right-10 transition-all md:justify-start md:inset-auto md:w-auto ">
-              <div className="flex flex-col items-center justify-center gap-3 relative mx-auto md:hidden">
-                <div className="flex gap-3 justify-center">
-                  <Link
-                    href="/services/birth-certificate"
-                    className="bg-green-700 block hover:bg-green-700 text-white transition-all font-medium inline-flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl"
-                  >
-                    <span className="flex items-center gap-2">
-                      <FileText className="h-4 w-4" />
-                      Birth Certificate
-                    </span>
-                  </Link>
-
-                  <Link
-                    href="/services/identification"
-                    className="bg-orange-700 block hover:bg-orange-700 text-white transition-all font-medium inline-flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl"
-                  >
-                    <span className="flex items-center gap-2">
-                      <FileUser className="h-4 w-4" />
-                      ID Certificate
-                    </span>
-                  </Link>
-                </div>
-
-                <button
-                  onClick={() => router.push("/anonymous-message")}
-                  className="bg-indigo-700 hover:bg-indigo-700 mx-auto cursor-pointer text-white transition-all font-medium inline-flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl"
-                >
-                  <span className="flex items-center justify-center gap-2">
-                    <MessageCircle className="h-4 animate-bounce w-4" />
-                    Drop Message
-                  </span>
-                </button>
-              </div>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/services/birth-certificate"
+                className="inline-flex items-center gap-2 rounded-sm bg-[var(--gold)] px-5 py-3 text-sm font-semibold text-[#111] transition hover:brightness-110"
+              >
+                <FileText className="h-4 w-4" />
+                Birth Certificate
+              </Link>
+              <Link
+                href="/services/identification"
+                className="inline-flex items-center gap-2 rounded-sm border border-border px-5 py-3 text-sm font-semibold text-foreground transition hover:border-[var(--gold)] hover:text-[var(--gold)]"
+              >
+                <FileUser className="h-4 w-4" />
+                ID Certificate
+              </Link>
+              <button
+                type="button"
+                onClick={() => router.push('/anonymous-message')}
+                className="inline-flex items-center gap-2 rounded-sm px-5 py-3 text-sm font-semibold text-muted-foreground transition hover:text-[var(--gold)]"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Drop a message
+              </button>
             </div>
           </div>
 
-          {/* Right Visual Section */}
-          <div className="relative h-full lg:flex items-center justify-center">
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 via-transparent to-green-500/20 rounded-3xl blur-2xl"></div>
-
-            {/* Service Preview Cards - Desktop view */}
-            <div 
-            className="relative hidden md:block space-y-6 w-full mb-74 max-w-sm">
-              <div
-              className="transform  opacity-90">
-                <div 
-                onClick={()=>router.push('/services/birth-certificate')}
-                className="bg-gradient-to-tl from-green-300 to-green-500 hover:scale-[1.1] transition-all cursor-pointer rounded-xl p-6 text-white shadow-2xl border border-green-400/30">
-                  <h3 className="text-xl font-bold mb-2">Birth Certificate</h3>
-                  <p className="text-sm opacity-90">Official LG birth registration</p>
-                </div>
-              </div>
-
-              <div
-              onClick={()=>router.push('/services/identification')}
-              className="transform  opacity-90">
-                <div className="bg-gradient-to-br cursor-pointer from-gray-100/90 to-white hover:scale-[1.1] transition-all rounded-xl p-6 text-gray-800 shadow-2xl border border-yellow-400/50">
-                  <h3 className="text-xl font-bold mb-2">Local Government ID</h3>
-                  <p className="text-sm opacity-90">Your LG, your identity</p>
-                </div>
-              </div>
-
-              <div
-              onClick={()=>router.push('/staff')}
-              className="transform  opacity-90">
-                <div className="bg-gradient-to-tl from-blue-300 to-blue-500 cursor-pointer hover:scale-[1.1] transition-all rounded-xl p-6 text-white shadow-2xl border border-orange-400/30">
-                  <h3 className="text-xl font-bold mb-2">Staff Organogram</h3>
-                  <p className="text-sm opacity-90">Get to know all the staff in active service</p>
-                </div>
-              </div>
-              <button
-                onClick={() => router.push("/anonymous-message")}
-                className="bg-indigo-700 hover:bg-indigo-700 mx-auto cursor-pointer text-white transition-all font-medium inline-flex items-center gap-2 px-4 py-2 rounded-lg shadow-lg hover:shadow-xl"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <MessageCircle className="h-4 animate-bounce w-4" />
-                  Drop Message
-                </span>
-              </button>
-            </div>
+          <div className="landing-bento">
+            {features.map((feature) => {
+              const Icon = feature.icon
+              return (
+                <article key={feature.title} className="glass-card">
+                  <Icon className="h-6 w-6 text-[var(--gold)]" />
+                  <div className="mt-8">
+                    <h3 className="glass-card__title">{feature.title}</h3>
+                    <p className="glass-card__body">{feature.description}</p>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </div>

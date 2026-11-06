@@ -7,20 +7,23 @@ import { ChairmanMessage } from '@/components/sections/chairman-message'
 import { AnnouncementsSection } from '@/components/sections/announcements-section'
 
 export const metadata = {
-  title: 'IGSL Government Portal',
-  description: 'Official portal for Igbo-Eze South Local Government services including identification, birth certificates, and community information.',
+  title: 'Igbo-Etiti Government Portal',
+  description: 'Official portal for Igbo-Etiti Local Government services including identification, birth certificates, and community information.',
 }
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="landing-shell">
       <Navbar />
-      <main className="flex-grow">
+      <main className="landing-main">
         <HeroSection />
-        {/* <ServicesSection /> */}
-         <ChairmanMessage />
-        <StatsSection />
-       
+        <ServicesSection />
+        <section className="landing-band">
+          <div className="landing-split">
+            <ChairmanMessage />
+            <StatsSection />
+          </div>
+        </section>
         <AnnouncementsSection />
       </main>
       <Footer />

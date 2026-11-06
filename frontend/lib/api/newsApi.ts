@@ -27,7 +27,7 @@ function normalizeNewsItem(item: any): BlogPost | null {
     content: String(item.content || item.description || ''),
     category: String(item.category || 'announcements'),
     tags: tagList,
-    author: String(item.author || 'IGSL Communications'),
+    author: String(item.author || 'Igbo-Etiti Communications'),
     date: new Date(item.date || item.createdAt || Date.now()),
     status: 'published',
   }

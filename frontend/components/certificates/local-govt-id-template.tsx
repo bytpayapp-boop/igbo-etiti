@@ -34,7 +34,7 @@ export function LocalGovtIdTemplate({
   data = {},
   referenceNumber,
 }: LocalGovtIdTemplateProps) {
-  const idNumber = `IGSL/AD/${referenceNumber.slice(-5)}`
+  const idNumber = `Igbo-Etiti/AD/${referenceNumber.slice(-5)}`
   const issueDate = new Date().toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
@@ -145,7 +145,7 @@ export function LocalGovtIdTemplate({
             </p>
 
             <p className="font-bold text-md">
-              in Igbo-Eze South Local Government Area of Enugu State.
+              in Igbo-Etiti Local Government Area of Enugu State.
             </p>
 
             <p className="flex items-baseline gap-1">
@@ -211,7 +211,7 @@ export function LocalGovtIdTemplate({
               <div className="text-center">
                 <div className="h-12 border-b border-foreground/50 w-32 mb-1"></div>
                 <p className="text-[12px] font-semibold">SECRETARY</p>
-                <p className="text-[10px]">Igbo-Eze South L.G.A</p>
+                <p className="text-[10px]">Igbo-Etiti L.G.A</p>
               </div>
           
             </div>

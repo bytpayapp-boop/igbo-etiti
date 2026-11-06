@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'IGSL Services',
+  title: 'Igbo-Etiti Services',
   description: 'Apply for a local government ID, register a birth certificate, or send an anonymous message to the council.',
 }
 
@@ -50,7 +50,7 @@ export default function ServicesPage() {
             Access the services you need
           </h1>
           <p className="mt-4 text-lg text-foreground/70">
-            From official identification to birth registration and confidential feedback, IGSL provides a simple path to serve residents efficiently.
+            From official identification to birth registration and confidential feedback, Igbo-Etiti provides a simple path to serve residents efficiently.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function ServicesPage() {
               <h2 className="mt-2 text-2xl font-bold text-foreground">We’re here to help you complete your request.</h2>
             </div>
             <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-              Learn about IGSL
+              Learn about Igbo-Etiti
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

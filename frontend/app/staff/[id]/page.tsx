@@ -45,7 +45,7 @@ export async function generateMetadata({
     const member = findStaffMember(directory, id)
 
     if (!member) {
-      return { title: 'Staff | IGSL' }
+      return { title: 'Staff | Igbo-Etiti' }
     }
 
     const displayName = getDisplayName(member)
@@ -60,7 +60,7 @@ export async function generateMetadata({
         title: displayName,
         description,
         url: profileUrl,
-        siteName: 'IGSL',
+        siteName: 'Igbo-Etiti',
         type: 'profile',
         images: [
           {
@@ -79,7 +79,7 @@ export async function generateMetadata({
       },
     }
   } catch {
-    return { title: 'Staff | IGSL' }
+    return { title: 'Staff | Igbo-Etiti' }
   }
 }
 

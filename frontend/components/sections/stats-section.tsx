@@ -1,9 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '../ui/button'
 import { useRouter } from 'next/navigation'
+import { Button } from '../ui/button'
 
 interface StatItemProps {
   number: number
@@ -25,67 +24,62 @@ function StatItem({ number, label, image }: StatItemProps) {
   }, [count, number])
 
   return (
-    <Card className="group text-center border-transparent hover:border-green-600/10 relative overflow-hidden hover:shadow-lg transition-all">
-      <div className="absolute h-40 w-40 rounded-full group-hover:scale-[1.8] transition-all bg-green-600/10 z-[80] -bottom-20 -right-20" />
-      <CardContent className="pt-8 pb-5 z-[100]">
-        <div className="space-y-3">
-          <div className="text-4xl md:text-5xl font-bold">
-            {count.toLocaleString()}
-          </div>
-          <p className="text-foreground/80 text-lg leading-relaxed">{label}</p>
-        </div>
-
-        {image ? (
-          <div className="mt-5 overflow-hidden rounded-xl border border-green-600/10 bg-muted/20">
-            <img
-              src={image}
-              alt={label}
-              loading="lazy"
-              className="h-32 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-        ) : null}
-      </CardContent>
-    </Card>
+    <article className="group relative overflow-hidden border-b border-border last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 lg:border-r-0">
+      {image ? (
+        <img
+          src={image}
+          alt={label}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover opacity-15 transition duration-500 group-hover:scale-105 group-hover:opacity-25"
+        />
+      ) : null}
+      <div className="relative z-10 flex min-h-[11rem] flex-col justify-end p-6 md:min-h-[13rem]">
+        <p className="font-display text-4xl text-[var(--gold)] md:text-5xl">
+          {count.toLocaleString()}
+        </p>
+        <p className="mt-2 max-w-[16rem] text-sm leading-relaxed text-muted-foreground">{label}</p>
+      </div>
+    </article>
   )
 }
 
 export function StatsSection() {
   const stats = [
-    { number: 4500, label: 'Capacity Modern Secretariat Building',img:'projects/buildingProject.jpg' },
-    { number: 3500, label: 'Youths Trained & Empowered', img:'projects/aiTraining.jpg' },
-      { number: 10000, label: 'Students supported in WAEC & JAMB', img:'projects/jambEmpowerment.jpg'},
-    { number: 2300, label: 'Kilometers of New Asphated Roads',img:'projects/roadConstruction.jpg' }
-  
-  ];
+    { number: 4500, label: 'Capacity modern secretariat building', img: 'projects/buildingProject.jpg' },
+    { number: 3500, label: 'Youths trained and empowered', img: 'projects/aiTraining.jpg' },
+    { number: 10000, label: 'Students supported in WAEC & JAMB', img: 'projects/jambEmpowerment.jpg' },
+    { number: 2300, label: 'Kilometers of new asphalted roads', img: 'projects/roadConstruction.jpg' },
+  ]
 
   const router = useRouter()
 
   return (
-    <section className="bg-white/20 dark:bg-gray-800 bg-gradient-to-b  from-white via-green-200/10 to-white dark:from-gray-800 dark:via-green-200/20 dark:to-gray-800 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-            Impact Highlights
-          </h2>
-          <p className="text-lg text-foreground/70">
-            Serving the community with dedication and excellence
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <StatItem
-              key={stat.label}
-              number={stat.number}
-              label={stat.label}
-              image={stat.img}
-            />
-          ))}
-        </div>
-        <Button 
-        onClick={()=>router.push('/gallery')}
-        className='mt-4 bg-primary cursor-pointer' >See More in Gallery</Button>
+    <aside className="flex flex-col bg-muted text-foreground">
+      <div className="border-b border-border px-6 py-8 md:px-10">
+        <p className="eyebrow">Impact highlights</p>
+        <h2 className="mt-3 text-3xl md:text-4xl">Serving with measurable work</h2>
+        <p className="mt-3 max-w-md text-sm text-muted-foreground">
+          Dedication shown in infrastructure, education, and youth opportunity.
+        </p>
       </div>
-    </section>
+      <div className="grid flex-1 grid-cols-1 sm:grid-cols-2">
+        {stats.map((stat) => (
+          <StatItem
+            key={stat.label}
+            number={stat.number}
+            label={stat.label}
+            image={stat.img}
+          />
+        ))}
+      </div>
+      <div className="border-t border-border p-6">
+        <Button
+          onClick={() => router.push('/gallery')}
+          className="rounded-sm bg-[var(--gold)] text-[var(--ink)] hover:bg-[var(--gold)]/90"
+        >
+          See more in gallery
+        </Button>
+      </div>
+    </aside>
   )
 }

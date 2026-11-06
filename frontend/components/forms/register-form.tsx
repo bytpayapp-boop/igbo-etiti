@@ -146,7 +146,7 @@ export function RegisterForm() {
                 className="w-10 h-10"
               />
             </div>
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link>
           <div className="font-semibold text-primary/70 text-xs absolute top-5 left-8 block md:hidden">Back to Home</div>
       <Card className="w-full max-w-md mt-10 border-primary/20 shadow-xl">

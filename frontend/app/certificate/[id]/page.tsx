@@ -113,7 +113,7 @@ export default function CertificatePage() {
                       className="w-10 h-10"
                     />
                   </div>
-                  <span className="sm:inline text-gray-600 dark:text-gray-300">IGSL</span>
+                  <span className="sm:inline text-gray-600 dark:text-gray-300">Igbo-Etiti</span>
                 </Link>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         {/* Header */}

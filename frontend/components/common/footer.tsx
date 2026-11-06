@@ -3,93 +3,89 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-primary/20 text-gray-700 dark:text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Organization Info */}
+    <footer className="bg-muted text-foreground">
+      <div className="h-1 w-full bg-[var(--gold)]" />
+      <div className="landing-wrap py-12">
+        <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="font-bold text-xl mb-4">IGSL</h3>
-            <p className="text-sm ">
+            <h3 className="mb-4 text-xl font-bold">Igbo-Etiti</h3>
+            <p className="text-sm text-muted-foreground">
               Serving our community with integrity, transparency, and commitment to development.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="mb-4 font-semibold text-[var(--gold)]">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/" className="hover:text-accent transition">
+                <Link href="/" className="transition hover:text-[var(--gold)]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-accent transition">
+                <Link href="/about" className="transition hover:text-[var(--gold)]">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-accent transition">
+                <Link href="/services" className="transition hover:text-[var(--gold)]">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-accent transition">
+                <Link href="/blog" className="transition hover:text-[var(--gold)]">
                   News
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Information */}
           <div>
-            <h4 className="font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="mb-4 font-semibold text-[var(--gold)]">Contact Us</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <Phone size={16} className="mt-0.5 flex-shrink-0" />
+                <Phone size={16} className="mt-0.5 flex-shrink-0 text-[var(--gold)]" />
                 <span>+234 810 268 7279</span>
               </li>
               <li className="flex items-start gap-2">
-                <Mail size={16} className="mt-0.5 flex-shrink-0" />
+                <Mail size={16} className="mt-0.5 flex-shrink-0 text-[var(--gold)]" />
                 <span>info@igboezesouth.com</span>
               </li>
               <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
-                <span>Igbo-Eze South Secretariat, Ibagwa-Aka</span>
+                <MapPin size={16} className="mt-0.5 flex-shrink-0 text-[var(--gold)]" />
+                <span>Igbo-Etiti Secretariat, Ogbede</span>
               </li>
             </ul>
           </div>
 
-          {/* Office Hours */}
           <div>
-            <h4 className="font-semibold mb-4">Office Hours</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="mb-4 font-semibold text-[var(--gold)]">Office Hours</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <Clock size={16} className="mt-0.5 flex-shrink-0" />
+                <Clock size={16} className="mt-0.5 flex-shrink-0 text-[var(--gold)]" />
                 <div>
                   <div>Monday - Friday</div>
-                  <div className="">8:00 AM - 5:00 PM</div>
+                  <div>8:00 AM - 5:00 PM</div>
                 </div>
               </li>
-              <li className="font-semibold">
+              <li className="font-semibold text-foreground">
                 Closed on weekends and public holidays
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm font-semibold">
-            <p>&copy; 2026 IGSL - Enugu State. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="#" className="hover:text-accent transition">
+        <div className="border-t border-border pt-8">
+          <div className="flex flex-col items-center justify-between text-sm font-semibold md:flex-row">
+            <p className="text-muted-foreground">&copy; 2026 Igbo-Etiti - Enugu State. All rights reserved.</p>
+            <div className="mt-4 flex gap-6 md:mt-0">
+              <Link href="#" className="text-muted-foreground transition hover:text-[var(--gold)]">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-accent transition">
+              <Link href="#" className="text-muted-foreground transition hover:text-[var(--gold)]">
                 Terms of Service
               </Link>
-              <Link href="#" className="hover:text-accent transition">
+              <Link href="#" className="text-muted-foreground transition hover:text-[var(--gold)]">
                 Contact
               </Link>
             </div>

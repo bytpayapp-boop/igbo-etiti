@@ -2,7 +2,7 @@
  * Create an admin user (run after applying the AdminUser schema).
  *
  * Usage:
- *   ADMIN_EMAIL=admin@igsl.gov.ng ADMIN_PASSWORD='secret' ADMIN_NAME='IGSL Admin' node scripts/create-admin.js
+ *   ADMIN_EMAIL=admin@igsl.gov.ng ADMIN_PASSWORD='secret' ADMIN_NAME='Igbo-Etiti Admin' node scripts/create-admin.js
  */
 require('dotenv').config()
 const bcrypt = require('bcryptjs')
@@ -13,7 +13,7 @@ const prisma = new PrismaClient()
 async function main() {
   const email = (process.env.ADMIN_EMAIL || '').trim().toLowerCase()
   const password = process.env.ADMIN_PASSWORD
-  const fullName = process.env.ADMIN_NAME || 'IGSL Administrator'
+  const fullName = process.env.ADMIN_NAME || 'Igbo-Etiti Administrator'
 
   if (!email || !password) {
     console.error('Set ADMIN_EMAIL and ADMIN_PASSWORD environment variables.')

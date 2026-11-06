@@ -46,12 +46,12 @@ export default function StaffPage() {
                 className="w-5 md:w-10 h-5 md:h-10"
               />
             </div>
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link> 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-16">
         <div className="mb-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em]">
-           Igbo-Eze South Local Government 
+           Igbo-Etiti Local Government 
           </p>
           <h1 className="mt-4 text-4xl md:text-5xl font-bold">Our Staff</h1>
           <p className="mt-4 text-lg text-foreground/70 max-w-2xl mx-auto">

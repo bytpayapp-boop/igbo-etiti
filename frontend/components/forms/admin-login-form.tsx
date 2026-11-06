@@ -75,7 +75,7 @@ export function AdminLoginForm() {
           </div>
           <CardTitle className="text-2xl">Admin Access</CardTitle>
           <CardDescription>
-            Authorized IGSL staff only. This is separate from citizen login.
+            Authorized Igbo-Etiti staff only. This is separate from citizen login.
           </CardDescription>
         </CardHeader>
         <CardContent>

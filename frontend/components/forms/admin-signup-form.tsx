@@ -129,7 +129,7 @@ export function AdminSignupForm() {
           </div>
           <CardTitle className="text-2xl">Create Admin Account</CardTitle>
           <CardDescription>
-            Register an IGSL staff account to access the admin panel.
+            Register an Igbo-Etiti staff account to access the admin panel.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -151,7 +151,7 @@ export function AdminSignupForm() {
                 className="border-gray-700/50 dark:border-gray-300/50"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder="IGSL Administrator"
+                placeholder="Igbo-Etiti Administrator"
                 disabled={isLoading}
               />
               {errors.fullName && <p className="text-xs text-destructive">{errors.fullName}</p>}

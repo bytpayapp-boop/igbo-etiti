@@ -88,7 +88,7 @@ export function BirthCertificateTemplate({
   }
 
   const rows = [
-    ["1.", "No.IGSL/AD/", calculateAge(data.dateOfBirth) || ""],
+    ["1.", "No.Igbo-Etiti/AD/", calculateAge(data.dateOfBirth) || ""],
     ["2.", "Date of Birth.", formatDateOfBirth(data.dateOfBirth)],
     ["3.", "Place of Birth.", data.placeOfBirth || ""],
     ["4.", "Sex of Child.", data.gender || ""],

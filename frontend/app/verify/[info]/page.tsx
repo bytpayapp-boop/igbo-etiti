@@ -38,7 +38,7 @@ function VerifyContent() {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src="/coatOfArm.png"
-            alt="IGSL Coat of Arms"
+            alt="Igbo-Etiti Coat of Arms"
             className="w-96 h-96 opacity-10"
           />
         </div>
@@ -97,7 +97,7 @@ function VerifyContent() {
                   Certificate is Official and Valid
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-600 font-medium">
-                  Belongs to <span className="font-bold">{user.n}</span>, issued by <span className="font-bold">Igbo-Eze South L.G.A</span>
+                  Belongs to <span className="font-bold">{user.n}</span>, issued by <span className="font-bold">Igbo-Etiti L.G.A</span>
                 </p>
                 {user.w && (
                   <p className="text-lg text-gray-500">
@@ -116,7 +116,7 @@ function VerifyContent() {
 
               {/* Subtitle */}
               <p className="text-lg text-gray-500 mb-12">
-                Your certificate has been verified and authenticated by the IGSL Local Government Authority. It is valid and can be used for all official purposes.
+                Your certificate has been verified and authenticated by the Igbo-Etiti Local Government Authority. It is valid and can be used for all official purposes.
               </p>
 
               {/* Action Buttons

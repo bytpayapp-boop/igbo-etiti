@@ -17,7 +17,7 @@ export function ServiceCard({ icon: Icon, title, description, href }: ServiceCar
           <div className="mb-4 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
             <Icon className="w-6 h-6 text-accent" />
           </div>
-          <CardTitle className="text-primary">{title}</CardTitle>
+          <CardTitle className="text-foreground">{title}</CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription className="text-foreground/70">{description}</CardDescription>

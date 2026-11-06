@@ -114,7 +114,7 @@ export function LoginForm() {
                 className="w-10 h-10"
               />
             </div>
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link>
       <Card className="w-full max-w-md border-primary/20 shadow-xl">
         <CardHeader className="space-y-2  border-b">

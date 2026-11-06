@@ -98,7 +98,7 @@ const[user,setUser] = useState({fullName:'unknown',email:'Please login!'})
                 className="w-10 h-10"
               />
             </div>
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link>
         </div>
 

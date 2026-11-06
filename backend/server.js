@@ -60,7 +60,7 @@ const createSlug = (title) => {
 app.use(cors({
 origin: [
     'https://igsl-website.onrender.com',
-    'https://igsl-ng.vercel.app',
+    'https://igbo-etiti.vercel.app',
     'https://igsl.vercel.app',
     'http://localhost:3000', // For local development
   ],
@@ -72,7 +72,7 @@ app.use(express.json())
 
 app.head('/health', (req, res) => {
   console.log('req body received for health check:',req.body)
-  console.log('HEAD api wake-up call from Uptimerobot')
+  console.log('HEADapi2 wake-up call from Uptimerobot')
   res.status(200).json({ status: 'ok', message: 'Backend server is running' })
 })
 
@@ -80,7 +80,7 @@ app.head('/health', (req, res) => {
 
 app.get('/health', (req, res) => {
   console.log('req body received for health check from render.com:',req.body)
-  // console.log('HEAD api wake-up call from Uptimerobot')
+  // console.log('HEADapi2 wake-up call from Uptimerobot')
   res.status(200).json({ status: 'ok', message: 'Backend server is running' })
 })
 
@@ -731,7 +731,7 @@ app.get('/api/news', async (req, res) => {
         category: record.category,
         content: record.content || record.description || '',
         description: record.description || record.content || '',
-        author: record.author || 'IGSL Communications',
+        author: record.author || 'Igbo-Etiti Communications',
         tags,
         coverImage: coverImageUrl,
         galleryImages: record.galleryImages,
@@ -785,7 +785,7 @@ app.get('/api/news/:slug', async (req, res) => {
       category: matched.category,
       content: matched.content || matched.description || '',
       description: matched.description || matched.content || '',
-      author: matched.author || 'IGSL Communications',
+      author: matched.author || 'Igbo-Etiti Communications',
       tags,
       coverImage: matched.coverImageUrl || '/blog-1.png',
       coverImageUrl: matched.coverImageUrl || '/blog-1.png',
@@ -1728,7 +1728,7 @@ app.post('/flutterwaveTest/trx', async (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Backend server running on http://localhost:${PORT}`)
-  console.log(`📝 API Documentation available at http://localhost:${PORT}/health`)
+  console.log(`📝api2 Documentation available at http://localhost:${PORT}/health`)
 })
 
 module.exports = app

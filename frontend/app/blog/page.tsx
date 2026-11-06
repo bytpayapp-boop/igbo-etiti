@@ -73,13 +73,13 @@ export default function BlogPage() {
         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-md">
           <img src="/coatOfArm.png" alt="Nigerian Coat of Arms" className="w-10 h-10" />
         </div>
-        <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+        <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
       </Link>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-22">
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">News & Updates</h1>
           <p className="text-lg text-foreground/70">
-            Stay informed about the latest announcements and developments from Igbo-Eze South
+            Stay informed about the latest announcements and developments from Igbo-Etiti
           </p>
         </div>
 

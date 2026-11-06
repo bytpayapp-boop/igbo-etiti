@@ -14,16 +14,16 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'IGSL Local Government',
-  description: 'Official website of Igbo-Eze South LGA - Services, Information, and Citizen Engagement',
+  title: 'Igbo-Etiti Local Government',
+  description: 'Official website of Igbo-Etiti LGA - Services, Information, and Citizen Engagement',
   generator: 'Ezeh Mark',
   metadataBase: new URL('https://igsl.vercel.app'),
   alternates: {
     canonical: 'https://igsl.vercel.app',
   },
   keywords: [
-    'IGSL Local Government',
-    'Igbo-Eze South',
+    'Igbo-Etiti Local Government',
+    'Igbo-Etiti',
     'Local Government Services',
     'Birth Certificate',
     'Government ID',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Ezeh Mark' }],
   creator: 'Ezeh Mark',
-  publisher: 'IGSL Local Government',
+  publisher: 'Igbo-Etiti Local Government',
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-icon.png',
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'IGSL Local Government - Services & Citizen Engagement',
-    description: 'Official portal of IGSL Local Government - Services, Information, and Citizen Engagement',
+    title: 'Igbo-Etiti Local Government - Services & Citizen Engagement',
+    description: 'Official portal of Igbo-Etiti Local Government - Services, Information, and Citizen Engagement',
     url: 'https://igsl.vercel.app',
-    siteName: 'IGSL Local Government',
+    siteName: 'Igbo-Etiti Local Government',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'IGSL Local Government Portal',
+        alt: 'Igbo-Etiti Local Government Portal',
       },
     ],
     locale: 'en_US',
@@ -57,11 +57,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Igbo-Eze South LGA - Services & Citizen Engagement',
-    description: 'Official portal of IGSL Local Government - Services, Information, and Citizen Engagement',
+    title: 'Igbo-Etiti LGA - Services & Citizen Engagement',
+    description: 'Official portal of Igbo-Etiti Local Government - Services, Information, and Citizen Engagement',
     images: ['/og-image.png'],
   },
-  themeColor: '#ffffff',
+  themeColor: '#faf8f3',
 }
 
 export default function RootLayout({
@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"
-      className='bg-white'
+      className="bg-background"
       style={{scrollbarWidth:'thin'}}
       suppressHydrationWarning>
       <head>
@@ -81,7 +81,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://igsl.vercel.app" />
       </head>
       <body className={`${inter.className} antialiased flex flex-col  min-h-screen`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} forcedTheme="light">
           <main className="flex-1">
              {/* <Link href="/" className="flex items-center gap-3 font-bold top-5 left-5 text-xl md:top-5 md:left-10 absolute  md:block md:flex hover:opacity-80 transition-opacity">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-md">
@@ -91,7 +91,7 @@ export default function RootLayout({
                 className="w-10 h-10"
               />
             </div>
-            <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+            <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
           </Link> */}
             {children}
           </main>

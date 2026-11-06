@@ -57,7 +57,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: 'News | IGSL',
+      title: 'News | Igbo-Etiti',
     }
   }
 
@@ -73,7 +73,7 @@ export async function generateMetadata({
       title: post.title,
       description,
       url: articleUrl,
-      siteName: 'IGSL',
+      siteName: 'Igbo-Etiti',
       type: 'article',
       images: [
         {
@@ -340,7 +340,7 @@ export default async function BlogDetailPage({
                       By {post.author}
                     </p>
                     <p className="text-xs text-foreground/60">
-                      Official news and updates from IGSL Communications Department
+                      Official news and updates from Igbo-Etiti Communications Department
                     </p>
                   </div>
                 </div>

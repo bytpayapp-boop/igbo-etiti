@@ -97,7 +97,7 @@ export default function StaffDetailClient({ id }: { id: string }) {
             className="w-5 md:w-10 h-5 md:h-10"
           />
         </div>
-        <span className="sm:inline text-gray-700 dark:text-gray-300">IGSL</span>
+        <span className="sm:inline text-gray-700 dark:text-gray-300">Igbo-Etiti</span>
       </Link>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
